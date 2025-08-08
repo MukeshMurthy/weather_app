@@ -35,7 +35,8 @@ REACT_APP_WEATHER_API_KEY=your_api_key_here
 
 ## 📸 Screenshots
 
-_Add screenshots of the app here if needed._
+![Uploading image.png…]()
+
 
 ## 🙌 Acknowledgements
 
