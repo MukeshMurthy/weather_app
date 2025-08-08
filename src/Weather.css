@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../view-mountain-with-dreamy-aesthetic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  width: 1250px;
+  background-color: rgba(0, 0, 0, 0.301);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 25px 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.search-section {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.search-box {
+  flex: 1;
+  padding: 12px 20px;
+  border-color: rgba(0, 0, 0, 0.301);
+  outline: #fff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.301);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.search-box:hover{
+  background-color:#2118283e ;
+}
+
+
+.search-btn {
+  background-color:  rgba(0, 0, 0, 0.301);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #211828;
+  color: rgb(255, 255, 255);
+}
+
+.weather-container {
+  position: relative;
+  width: 100%;
+}
+
+.temp-summary {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 18px;
+}
+
+.maxi, .mini {
+  margin-bottom: 5px;
+}
+
+.main-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.city {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.temperature-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperature {
+  font-size: 68px;
+  font-weight: bold;
+  margin: 10px ;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+    /* margin-bottom:  265px; */
+}
+
+.description {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  text-align: center;
+  color:#fff;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.extra-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.detail {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 10px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* color: #6b21a8; */
+}
+
+.detail-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+.detail-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.detail::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 180px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  margin-bottom: 10px;
+}
+
+.detail:hover::after {
+  opacity: 1;
+}
+
+.wind-box:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.988);
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.7);
+  transform: scale(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.pressure-box:hover {
+  color: black;
+  background-color: rgb(227, 130, 130);
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.7);
+  transform: scale(1.05);
+  border: 1px solid rgba(185, 89, 89, 0.5);
+}
+
+.humidity-box:hover {
+  color: black;
+  background-color: rgb(130, 153, 227);
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.7);
+  transform:scale(1.05);
+  border: 1px solid rgba(25, 122, 226, 0.708);
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .city {
+    font-size: 32px;
+  }
+
+  .temperature {
+    font-size: 54px;
+  }
+
+  .description {
+    font-size: 28px;
+  }
+
+  .extra-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-box {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .temperature {
+    font-size: 26px;
+  }
+
+  .city {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .extra-details {
+    grid-template-columns: 1fr;
+  }
+
+  .temp-summary {
+    font-size: 14px;
+  }
+
+  .weather-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .city {
+    font-size: 16px;
+   
+  }
+
+  .temperature {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-top: 1px;
+  }
+
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .detail-value {
+    font-size: 16px;
+  }
+
+  .detail-title {
+    font-size: 12px;
+  }
+
+  .search-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+  }
+
+  .temp-summary {
+    font-size: 12px;
+  }
+}
+
