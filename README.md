@@ -35,7 +35,10 @@ REACT_APP_WEATHER_API_KEY=your_api_key_here
 
 ## 📸 Screenshots
 
-![Uploading image.png…]()
+<p align="center">
+  <img src="./screenshot.png" alt="Weather App Screenshot" width="800">
+</p>
+
 
 
 ## 🙌 Acknowledgements
